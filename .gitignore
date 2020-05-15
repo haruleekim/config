@@ -1,0 +1,8 @@
+*
+!.gitignore
+!vim/
+!vim/*
+!zsh/
+!zsh/*
+!git/
+!git/*

@@ -1,0 +1,6 @@
+[user]
+    name = Haru Kim
+    email = me@harukim.xyz
+[core]
+    editor = vi
+    autocrlf = input

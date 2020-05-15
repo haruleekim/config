@@ -1,0 +1,23 @@
+source ~/.vimrc
+
+set ideajoin
+set easymotion
+set surround
+set argtextobj
+
+nnoremap <leader>m :action Vcs.ShowMessageHistory<cr>
+nnoremap <leader>v :action Vcs.QuickListPopupAction<cr>
+
+nnoremap <leader>j :action QuickJavaDoc<cr>
+nnoremap <leader>d :action QuickTypeDefinition<cr>
+
+nnoremap <leader>t :action Refactorings.QuickListPopupAction<cr>
+nnoremap <leader>r :action RenameElement<cr>
+nnoremap <leader>h :action TypeHierarchyBase.BaseOnThisType<cr>
+nnoremap <leader>i :action ImplementMethods<cr>
+
+nnoremap <leader>l :action ReformatCode<cr>:action Cargo.RustfmtFile<cr>
+nnoremap <c-p> :action SearchEverywhere<cr>
+
+nnoremap <leader>ev :e ~/.ideavimrc<cr>
+nnoremap <leader>sv :source ~/.ideavimrc<cr>
