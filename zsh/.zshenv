@@ -1,5 +1,6 @@
 # Brew
 export PATH="/usr/local/sbin:$PATH"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
