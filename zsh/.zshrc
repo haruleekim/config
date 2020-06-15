@@ -4,6 +4,7 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle docker
 antigen bundle docker-compose
+antigen bundle gcloud
 antigen bundle comment-not-found
 antigen bundle zsh-users/zsh-completions
 antigen theme robbyrussell
