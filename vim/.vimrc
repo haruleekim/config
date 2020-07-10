@@ -21,15 +21,15 @@ inoremap kj _
 inoremap df <esc>
 inoremap fd <esc>
 
-nnoremap <c-p> <c-y>
-nnoremap <c-n> <c-e>
-nnoremap H ^
-nnoremap L $
+noremap <c-p> <c-y>
+noremap <c-n> <c-e>
+noremap H ^
+noremap L $
 
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
+noremap <c-h> <c-w>h
+noremap <c-j> <c-w>j
+noremap <c-k> <c-w>k
+noremap <c-l> <c-w>l
 
-nnoremap <leader>ev :e ~/.vimrc<cr>
-nnoremap <leader>sv :source ~/.vimrc<cr>
+noremap <leader>ev :e ~/.vimrc<cr>
+noremap <leader>sv :source ~/.vimrc<cr>

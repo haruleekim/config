@@ -5,19 +5,19 @@ set easymotion
 set surround
 set argtextobj
 
-nnoremap <leader>m :action Vcs.ShowMessageHistory<cr>
-nnoremap <leader>v :action Vcs.QuickListPopupAction<cr>
+noremap <leader>m :action Vcs.ShowMessageHistory<cr>
+noremap <leader>v :action Vcs.QuickListPopupAction<cr>
 
-nnoremap <leader>j :action QuickJavaDoc<cr>
-nnoremap <leader>d :action QuickTypeDefinition<cr>
+noremap <leader>j :action QuickJavaDoc<cr>
+noremap <leader>d :action QuickTypeDefinition<cr>
 
-nnoremap <leader>t :action Refactorings.QuickListPopupAction<cr>
-nnoremap <leader>r :action RenameElement<cr>
-nnoremap <leader>h :action TypeHierarchyBase.BaseOnThisType<cr>
-nnoremap <leader>i :action ImplementMethods<cr>
+noremap <leader>t :action Refactorings.QuickListPopupAction<cr>
+noremap <leader>r :action RenameElement<cr>
+noremap <leader>h :action TypeHierarchyBase.BaseOnThisType<cr>
+noremap <leader>i :action ImplementMethods<cr>
 
-nnoremap <leader>l :action ReformatCode<cr>:action Cargo.RustfmtFile<cr>
-nnoremap <c-p> :action SearchEverywhere<cr>
+noremap <leader>l :action ReformatCode<cr>
+noremap <c-p> :action SearchEverywhere<cr>
 
-nnoremap <leader>ev :e ~/.ideavimrc<cr>
-nnoremap <leader>sv :source ~/.ideavimrc<cr>
+noremap <leader>ev :e ~/.ideavimrc<cr>
+noremap <leader>sv :source ~/.ideavimrc<cr>
