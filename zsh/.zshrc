@@ -16,3 +16,4 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Aliases
 alias ls='exa'
 alias la='exa -al'
+alias vi='nvim'

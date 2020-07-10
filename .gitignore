@@ -3,6 +3,8 @@
 !setup.zsh
 !vim/
 !vim/*
+!nvim/
+!nvim/*
 !zsh/
 !zsh/*
 !git/
