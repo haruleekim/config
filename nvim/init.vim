@@ -1,10 +1,43 @@
-source ~/.config/vim/.vimrc
-noremap <leader>ev :e ~/.config/nvim/init.vim<cr>
-noremap <leader>sv :source ~/.config/nvim/init.vim<cr>
+syntax on
+filetype plugin indent on
 
-call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf'
+set noswapfile
+set nobackup
+set nowritebackup
+set number
+set relativenumber
+set ignorecase
+set smartcase
+set wildignorecase
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set smartindent
+set hlsearch
+set hidden
+set cmdheight=2
+set showmode
+set shortmess+=c
+set signcolumn=yes
+set timeoutlen=500
+set ttimeoutlen=0
+set updatetime=300
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
-call plug#end()
+let g:nvim_config_root = stdpath('config')
+let g:config_file_list = [
+\ 'plugins.vim',
+\ 'keymap.vim',
+\ 'coc.vim',
+\ 'smooth-scroll.vim',
+\ 'style.vim',
+\]
+
+for file in g:config_file_list
+  execute 'source ' . g:nvim_config_root . '/' . file
+endfor
+
+nohl
+if exists(':AirlineRefresh')
+  silent exec 'AirlineRefresh'
+endif

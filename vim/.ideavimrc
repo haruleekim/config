@@ -11,13 +11,15 @@ noremap <leader>v :action Vcs.QuickListPopupAction<cr>
 noremap <leader>j :action QuickJavaDoc<cr>
 noremap <leader>d :action QuickTypeDefinition<cr>
 
+noremap <leader>m :action EditorPopupMenu<cr>
 noremap <leader>t :action Refactorings.QuickListPopupAction<cr>
+noremap <leader>a :action ShowIntentionActions<cr>
+noremap <leader>f :action ShowErrorDescription<cr>
 noremap <leader>r :action RenameElement<cr>
 noremap <leader>h :action TypeHierarchyBase.BaseOnThisType<cr>
 noremap <leader>i :action ImplementMethods<cr>
 
 noremap <leader>l :action ReformatCode<cr>
-noremap <c-p> :action SearchEverywhere<cr>
 
 noremap <leader>ev :e ~/.ideavimrc<cr>
 noremap <leader>sv :source ~/.ideavimrc<cr>

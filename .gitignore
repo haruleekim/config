@@ -9,3 +9,6 @@
 !zsh/*
 !git/
 !git/*
+
+.DS_Store
+.netrwhist
