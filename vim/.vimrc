@@ -28,7 +28,7 @@ set showmode
 let mapleader = " "
 
 nohl
-nnoremap <silent> <c-c> <c-c><cmd>nohl<cr>
+nnoremap <silent> <c-c> <c-c>:nohl<cr>
 
 inoremap jk _
 inoremap Jk _
@@ -55,14 +55,22 @@ noremap <c-n> <c-e>
 noremap H ^
 noremap L $
 
-noremap <silent> - <cmd>botright sp<cr>
-noremap <silent> \ <cmd>botright vs<cr>
+noremap <silent> - :botright sp<cr>
+noremap <silent> \ :botright vs<cr>
 
 noremap <c-h> <c-w>h
 noremap <c-j> <c-w>j
 noremap <c-k> <c-w>k
 noremap <c-l> <c-w>l
 
+" Cursor shapes
 let &t_SI.="\e[5 q"
 let &t_SR.="\e[4 q"
 let &t_EI.="\e[1 q"
+
+" MacOS dark mode supports
+if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+  set background=dark
+else
+  set background=light
+endif

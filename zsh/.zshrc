@@ -6,7 +6,8 @@ antigen bundle docker
 antigen bundle docker-compose
 antigen bundle aws
 antigen bundle gcloud
-antigen bundle comment-not-found
+antigen bundle command-not-found
+antigen bundle vi-mode
 antigen bundle zsh-users/zsh-completions
 antigen theme robbyrussell
 antigen apply
@@ -33,6 +34,11 @@ zle-keymap-select() {
 # Aliases
 alias ls='exa'
 alias la='exa -al'
+
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude .vim'
 
 
 # Syntax highlighting
