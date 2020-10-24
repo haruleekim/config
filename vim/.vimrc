@@ -74,3 +74,6 @@ if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
 else
   set background=light
 endif
+
+" Default filetype
+set filetype=zsh
