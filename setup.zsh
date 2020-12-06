@@ -1,25 +1,52 @@
-SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+SCRIPT_PATH="$(cd "$(dirname "$0")" >/dev/null 2>&1; pwd -P)"
 
-ln -s "$SCRIPTPATH/vim/.vimrc" "$HOME/.vimrc"
-ln -s "$SCRIPTPATH/vim/.ideavimrc" "$HOME/.ideavimrc"
-ln -s "$SCRIPTPATH/vim/.xvimrc" "$HOME/.xvimrc"
-
-ln -s "$SCRIPTPATH/zsh/.zshrc" "$HOME/.zshrc"
-ln -s "$SCRIPTPATH/zsh/.zprofile" "$HOME/.zprofile"
-ln -s "$SCRIPTPATH/zsh/.zshenv" "$HOME/.zshenv"
-
-ln -s "$SCRIPTPATH/git/.gitconfig" "$HOME/.gitconfig"
-
+# Install Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-brew install exa
+# Setup Z-Shell
+ln -s "$SCRIPT_PATH/zshrc" "$HOME/.zshrc"
+brew install zsh
 brew install zsh-syntax-highlighting
-brew install nvm
-brew install pyenv
+# Use Antigen as the package manager of ZSH
+ANTIGEN_PATH="/usr/local/share/antigen"
+mkdir -p $ANTIGEN_PATH
+curl -L git.io/antigen > "$ANTIGEN_PATH/antigen.zsh"
+chsh -s "$(brew --prefix zsh)/bin/zsh"
 
-ANTIGENPATH="/usr/local/share/antigen"
-mkdir -p $ANTIGENPATH
-curl -L git.io/antigen > "$ANTIGENPATH/antigen.zsh"
+# Install shell prompt (Starship)
+brew install starship
 
-brew install neovim
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# Install development environments
+## Docker
+brew cask install docker
+## Python
+brew install python
+brew install pipenv
+## Node
+brew install node
+brew install yarn
+## Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
+rustup toolchain install stable
+rustup toolchain install nightly
+## C & C++
+brew install cmake
+
+# Setup system utilities
+brew install exa
+brew install fd
+brew install bat
+brew install tokei
+brew install ripgrep
+brew install procs
+
+# Setup Git
+ln -s "$SCRIPT_PATH/gitconfig" "$HOME/.gitconfig"
+brew install git
+
+# Setup Vim
+ln -s "$SCRIPT_PATH/vimrc" "$HOME/.vimrc"
+ln -s "$SCRIPT_PATH/vimrc.keymap" "$HOME/.vimrc.keymap"
+ln -s "$SCRIPT_PATH/ideavimrc" "$HOME/.ideavimrc"
+brew install vim
+
