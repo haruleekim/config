@@ -1,0 +1,20 @@
+source $HOME/.vimrc.keymap
+
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set exchange
+set textobj-entire
+set ideajoin
+set easymotion
+
+set g:argtextobj_pairs="(:),[:],{:},<:>"
+
+noremap == :action ReformatCode<cr>
+noremap ga :action ShowIntentionActions<cr>
+noremap gh :action QuickJavaDoc<cr>:action ShowErrorDescription<cr>
+noremap gr :action RenameElement<cr>
+noremap gR :action Refactorings.QuickListPopupAction<cr>
+noremap gv :action Vcs.QuickListPopupAction<cr>
+
