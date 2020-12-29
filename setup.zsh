@@ -27,7 +27,7 @@ brew install pipenv
 brew install node
 brew install yarn
 ## Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 rustup toolchain install stable
 rustup toolchain install nightly
 ## C & C++
