@@ -19,7 +19,7 @@ brew install starship
 
 # Install development environments
 ## Docker
-brew cask install docker
+brew install --cask docker
 ## Python
 brew install python
 brew install pipenv
