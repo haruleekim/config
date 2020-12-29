@@ -30,6 +30,7 @@ brew install yarn
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 rustup toolchain install stable
 rustup toolchain install nightly
+cargo install cargo-edit
 ## C & C++
 brew install cmake
 
