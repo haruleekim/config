@@ -2,6 +2,7 @@ SCRIPT_PATH="$(cd "$(dirname "$0")" >/dev/null 2>&1; pwd -P)"
 
 # Install Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+chmod -R 755 /usr/local/share
 
 # Setup Z-Shell
 ln -s "$SCRIPT_PATH/zshrc" "$HOME/.zshrc"
