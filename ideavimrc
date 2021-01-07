@@ -1,4 +1,4 @@
-source $HOME/.vimrc.keymap
+source ~/.vimrc.keymap
 
 set surround
 set multiple-cursors
@@ -8,6 +8,7 @@ set exchange
 set textobj-entire
 set ideajoin
 set easymotion
+set keep-english-in-normal-and-restore-in-insert
 
 set g:argtextobj_pairs="(:),[:],{:},<:>"
 
