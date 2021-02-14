@@ -6,3 +6,5 @@
 !ideavimrc
 !zshrc
 !gitconfig
+!rustfmt/
+!rustfmt/*
